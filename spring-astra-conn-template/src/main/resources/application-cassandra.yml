@@ -1,0 +1,8 @@
+spring:
+  data.cassandra:
+    username: ${ASTRA_DB_CLIENT_ID}
+    password: ${ASTRA_DB_CLIENT_SECRET}
+    keyspace-name: ${ASTRA_DB_KEYSPACE:my_keyspace}
+    keyspace-populator: ${KEYSPACE_POPULATOR:false}
+
+astra.secure-connect-bundle-path: ${ASTRA_DB_SECURE_BUNDLE:secure-connect-db.zip}

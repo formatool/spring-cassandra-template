@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  profiles:
+    group:
+      default: [cassandra, debug]
+
+---
+spring:
+  config:
+    activate.on-profile: debug
+
+init.info.show: true
+
+logging.level:
+  org.springframework.data.cassandra.core.cql: DEBUG
